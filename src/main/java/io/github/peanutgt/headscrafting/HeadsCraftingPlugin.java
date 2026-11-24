@@ -47,6 +47,7 @@ public final class HeadsCraftingPlugin extends JavaPlugin {
 
         reload();
         getServer().getPluginManager().registerEvents(new ConversionListener(this), this);
+        getServer().getPluginManager().registerEvents(new RecipeUnlockListener(this), this);
         AdminCommand command = new AdminCommand(this);
         Objects.requireNonNull(getCommand("headscrafting")).setExecutor(command);
         Objects.requireNonNull(getCommand("headscrafting")).setTabCompleter(command);
