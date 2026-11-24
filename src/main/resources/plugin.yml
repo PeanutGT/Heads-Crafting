@@ -1,0 +1,31 @@
+name: HeadsCrafting
+version: '${version}'
+main: io.github.peanutgt.headscrafting.HeadsCraftingPlugin
+api-version: '26.1'
+description: Craft a blank head, then turn it into a player head or a decorative head with a book.
+authors: [PeanutGT]
+softdepend: [SkinsRestorer]
+
+commands:
+  headscrafting:
+    description: Heads Crafting admin commands.
+    usage: /headscrafting <reload|giveblank [amount]>
+    aliases: [hc]
+    permission: headscrafting.admin
+
+permissions:
+  headscrafting.craft:
+    description: Craft blank heads.
+    default: true
+  headscrafting.player:
+    description: Turn blank heads into your own head.
+    default: true
+  headscrafting.player.others:
+    description: Turn blank heads into another player's head.
+    default: true
+  headscrafting.custom:
+    description: Turn blank heads into decorative heads from a texture value.
+    default: true
+  headscrafting.admin:
+    description: Reload the config and give blank heads.
+    default: op
