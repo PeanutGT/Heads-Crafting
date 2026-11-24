@@ -9,17 +9,25 @@ blank-head:
     - "&7簽名書標題寫玩家名：做出玩家頭"
     - "&7書與筆第一頁貼材質值：做出裝飾頭"
 
-# 空白頭顱的合成配方（尚未決定，先關閉）
+# 空白頭顱的合成配方
 # shape 是 3 行、每行 3 格；空白代表空格。ingredients 是字母對應的物品 ID。
+#   熔岩史萊姆球 | 靈魂火把 | 熔岩史萊姆球
+#   鑲金西瓜     | 靈魂土   | 鑲金西瓜
+#   終界之眼     | 幽靈之淚 | 終界之眼
 recipe:
-  enabled: false
+  enabled: true
   amount: 1
   shape:
-    - "   "
-    - " T "
-    - "   "
+    - "MTM"
+    - "GSG"
+    - "ERE"
   ingredients:
-    T: TERRACOTTA
+    M: MAGMA_CREAM
+    T: SOUL_TORCH
+    G: GLISTERING_MELON_SLICE
+    S: SOUL_SOIL
+    E: ENDER_EYE
+    R: GHAST_TEAR
 
 # 換手轉換
 conversion:
