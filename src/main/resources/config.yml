@@ -16,7 +16,7 @@ blank-head:
 #   終界之眼     | 幽靈之淚 | 終界之眼
 recipe:
   enabled: true
-  amount: 1
+  amount: 4
   shape:
     - "MTM"
     - "GSG"
