@@ -16,6 +16,7 @@ blank-head:
 #   終界之眼     | 幽靈之淚 | 終界之眼
 recipe:
   enabled: true
+  unlock-on-join: true   # 玩家加入時自動解鎖配方（出現在配方書）
   amount: 4
   shape:
     - "MTM"
