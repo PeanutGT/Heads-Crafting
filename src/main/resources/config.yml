@@ -1,0 +1,55 @@
+# Heads Crafting 設定檔
+# 改完後用 /headscrafting reload 重新載入。
+
+# 空白頭顱的外觀
+blank-head:
+  name: "&f空白頭顱"
+  lore:
+    - "&7一手拿空白頭顱、一手拿書，按 F 換手"
+    - "&7簽名書標題寫玩家名：做出玩家頭"
+    - "&7書與筆第一頁貼材質值：做出裝飾頭"
+
+# 空白頭顱的合成配方（尚未決定，先關閉）
+# shape 是 3 行、每行 3 格；空白代表空格。ingredients 是字母對應的物品 ID。
+recipe:
+  enabled: false
+  amount: 1
+  shape:
+    - "   "
+    - " T "
+    - "   "
+  ingredients:
+    T: TERRACOTTA
+
+# 換手轉換
+conversion:
+  max-per-use: 64        # 一次最多轉換幾顆空白頭
+  consume-book: true     # 每次轉換消耗一本書
+  cooldown-seconds: 5    # 每位玩家兩次轉換之間的冷卻
+
+# 做出來的頭的名稱，{name} 代表玩家名
+player-head-name: "&e{name} 的頭"
+custom-head-name: "&e裝飾頭"
+
+# 皮膚來源：先查 Mojang，查不到再用 SkinsRestorer（有安裝才會用）
+skin:
+  mojang: true
+  skinsrestorer: true
+  cache-days: 7           # 查到的皮膚保留幾天
+  miss-cache-minutes: 60  # 查不到的名字多久內不重查
+  timeout-seconds: 8      # 每次向 Mojang 查詢的逾時
+
+messages:
+  looking-up: "&7正在查詢 {name} 的皮膚…"
+  done-player: "&a已做出 {count} 顆 {name} 的頭。"
+  done-custom: "&a已做出 {count} 顆裝飾頭。"
+  not-found: "&c查不到 {name} 的皮膚，空白頭顱和書都還在。"
+  lookup-failed: "&c查詢皮膚失敗，請稍後再試。"
+  invalid-name: "&c簽名書的標題不是有效的玩家名。"
+  invalid-texture: "&c書的第一頁不是有效的材質值。"
+  hands-changed: "&c手上的物品變了，這次轉換已取消。"
+  cooldown: "&c請等 {seconds} 秒後再轉換。"
+  busy: "&c上一次轉換還在查詢中。"
+  no-permission: "&c你沒有權限這麼做。"
+  reloaded: "&aHeads Crafting 設定已重新載入。"
+  gave-blank: "&a已給你 {count} 顆空白頭顱。"
